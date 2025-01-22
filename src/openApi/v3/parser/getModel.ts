@@ -27,7 +27,7 @@ export const getModel = (
         deprecated: definition.deprecated === true,
         isDefinition,
         isReadOnly: definition.readOnly === true,
-        isNullable: definition.nullable === true,
+        isNullable: definition.nullable === true || definition.default === null,
         isRequired: false,
         format: definition.format,
         maximum: definition.maximum,
